@@ -101,9 +101,15 @@ h1 {
 	top: -16em;
 	z-index: 45;
 	height: 20em;
-	transition: z-index 1.5s ease-in-out, top 1.5s ease-in-out, height 1.5s ease-in-out;
-	-webkit-transition: z-index 1.5s ease-in-out, top 1.5s ease-in-out, height 1.5s ease-in-out;
 	transition-delay: 1.5s;
+
+	/* Break down the transition properties */
+	transition-property: z-index, top, height;
+	-webkit-transition-property: z-index, top, height;
+	transition-duration: 1.5s, 1.5s, 1.5s;
+	-webkit-transition-duration: 1.5s, 1.5s, 1.5s;
+	transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+	-webkit-transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
 }
 
 .container:hover .cover {
